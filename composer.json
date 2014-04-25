@@ -1,0 +1,19 @@
+{
+    "name": "duodraco/phpsp-todo",
+    "description": "Simple To-Do App for GAE",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anderson 'Duodraco' Casimiro",
+            "email": "o@duodra.co"
+        }
+    ],
+    "require":{
+        "php":">=5.4.0",
+        "monolog/monolog":"1.9@stable",
+        "silex/silex":"~1.1",
+        "respect/config":"1.0.1",
+        "drakojn/io":"0.0.3.2"
+    }
+}
