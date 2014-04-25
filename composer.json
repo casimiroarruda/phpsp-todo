@@ -12,8 +12,7 @@
     "require":{
         "php":">=5.4.0",
         "monolog/monolog":"1.9@stable",
-        "silex/silex":"~1.1",
-        "respect/config":"1.0.1",
+        "silex/silex":"v1.2.0",
         "drakojn/io":"0.0.3.2"
     }
 }
