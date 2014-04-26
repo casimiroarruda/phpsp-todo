@@ -17,7 +17,8 @@ GAE e PHP, uma aplicação na prática
 ### O que encontramos no ambiente do GAE?
 
 #### Extensões
-
+|        |        |         |
+|--------|--------|---------|
 |apc     |json    |soap     |
 |bcmath  |libxml  |xml      |
 |calendar|mbstring|xmlreader|
@@ -50,15 +51,15 @@ GAE e PHP, uma aplicação na prática
 
 #### Limites
 
-|Limit 	                    |Amount
+|Limite	                    |Qtde
 |---------------------------|-------------------------
-|request size 	            |32 megabytes
-|response size 	            |32 megabytes
-|request duration 	        |60 seconds
-|Nº total de arquivos       |10,000 total
-|                           |1,000 per directory
-|Tamanho máximo de arquivo 	|32 megabytes
-|Tamanho total do app       |first 1 gigabyte is free
+|request size 	             |32 Mb
+|response size 	            |32 Mb
+|request duration 	         |60 segundos
+|Nº total de arquivos       |10.000 total
+|                           |1.000 p/ folder
+|Tamanho máximo de arquivo 	|32 Mb
+|Tamanho total do app       |1Gb free
 
 #### Google Cloud Storage
 
