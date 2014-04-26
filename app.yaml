@@ -6,4 +6,4 @@ threadsafe: true
 
 handlers:
 - url: .*
-  script: main.php
+  script: public/index.php
