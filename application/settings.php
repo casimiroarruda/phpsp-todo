@@ -1,4 +1,4 @@
 <?php
-return (object) [
+return [
     'apiHost' => 'localhost:33877'
 ];
