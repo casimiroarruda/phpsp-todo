@@ -1,5 +1,5 @@
 <?php
-$bucket = str_replace('dev~','',$_SERVER['APPLICATION_ID']);
+$bucket = str_replace(['dev~','s~'],'',$_SERVER['APPLICATION_ID']);
 return [
     'apiHost' => 'localhost:33877',
     'title' => 'PHPSP + GDG :: ToDo',

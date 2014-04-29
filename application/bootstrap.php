@@ -25,7 +25,7 @@ $application['driver'] = function () use ($application) {
 
 $application['mapper'] = new Pimple;
 
-$application['mapper']['task'] = function ($container) use ($application, $map) {
+$application['mapper']['task'] = function ($container) use ($application) {
     $map = new Map(
         'PHPSP\\ToDo\\Entity\\Task',
         'task',
