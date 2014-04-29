@@ -13,6 +13,12 @@
         "php":">=5.4.0",
         "monolog/monolog":"1.9@stable",
         "silex/silex":"v1.2.0",
-        "drakojn/io":"0.0.3.2"
+        "google/apiclient":"1.0.4-beta",
+        "drakojn/io":"0.0.3.4"
+    },
+    "autoload":{
+        "psr-4":{
+            "PHPSP\\":"application/library/PHPSP/"
+        }
     }
 }

@@ -1,13 +1,51 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-$container = new Pimple(require 'settings.php');
-$app = new Silex\Application;
-$app['debug'] = true;
+use Drakojn\Io\Mapper\Map;
+use PHPSP\ToDo\Service\Render;
 
-$app->get('/hello/{name}', function ($name) use ($app) {
-    return 'Hello ' . $app->escape($name);
-});
+$application = new Silex\Application;
+$application['settings'] = new Pimple(require 'settings.php');
+session_start();
+session_regenerate_id();
+$application['settings']['page'] = function () use ($application) {
+    Render::setBasePath($application['settings']['templates']);
+    $page = new Render('defaults/html');
+    $page['head'] = new Render('defaults/head');
+    $page['body'] = new Render('defaults/body');
+    $page['body']['header'] = new Render('defaults/body/header');
+    $page['body']['footer'] = new Render('defaults/body/footer');
+    $page['title'] = $application['settings']['title'];
+    return $page;
+};
 
+$application['driver'] = function () use ($application) {
+    return new Drakojn\Io\Driver\GS($application['settings']['datastore']);
+};
 
-$app->run();
+$application['mapper'] = new Pimple;
+
+$application['mapper']['task'] = function ($container) use ($application, $map) {
+    $map = new Map(
+        'PHPSP\\ToDo\\Entity\\Task',
+        'task',
+        'id',
+        [
+            'id' => 'id',
+            'title' => 'title',
+            'description' => 'description',
+            'done' => 'done'
+        ]
+    );
+    return new Drakojn\Io\Mapper($application['driver'], $map);
+};
+
+$application['debug'] = true;
+
+$application->get('/', 'PHPSP\\ToDo\\Controller\\Index::start');
+$application->get('/new', 'PHPSP\\ToDo\\Controller\\Index::newTask');
+$application->post('/task','PHPSP\\ToDo\\Controller\\Task::add');
+$application->post('/task/done','PHPSP\\ToDo\\Controller\\Task::done');
+$application->post('/task/undone','PHPSP\\ToDo\\Controller\\Task::undone');
+
+$application->run();

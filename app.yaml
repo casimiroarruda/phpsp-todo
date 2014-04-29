@@ -1,9 +1,21 @@
-application: phpsp-todo
+application: todo-phpsp
 version: 1
 runtime: php
 api_version: 1
 threadsafe: true
 
 handlers:
+- url: /css
+  static_dir: public/css
+
+- url: /javascript
+  static_dir: public/javascript
+
+- url: /fonts
+  static_dir: public/fonts
+
+- url: /images
+  static_dir: public/images
+
 - url: .*
   script: public/index.php
