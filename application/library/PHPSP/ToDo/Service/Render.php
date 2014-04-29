@@ -90,12 +90,11 @@ class Render implements \ArrayAccess
     public function __invoke()
     {
         ob_start();
-        //extract(self::$main->variables);
         $render = self::$main;
         require $this->template;
-        $render = ob_get_clean();
-        ob_end_clean();
-        return $render;
+        $output = ob_get_clean();
+    //    ob_end_clean();
+        return $output;
     }
 
 
