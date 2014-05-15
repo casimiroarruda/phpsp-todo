@@ -20,7 +20,7 @@ $application['settings']['page'] = function () use ($application) {
 };
 
 $application['driver'] = function () use ($application) {
-    return new Drakojn\Io\Driver\GS($application['settings']['datastore']);
+    return new Drakojn\Io\Driver\GCS($application['settings']['datastore']);
 };
 
 $application['mapper'] = new Pimple;
