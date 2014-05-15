@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "34d8f1e528bcbb7e81ae27c414b6828e",
+    "hash": "85279223a1f2f4878f1c940806dd4d1f",
     "packages": [
         {
             "name": "drakojn/io",
-            "version": "0.0.3.4",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drakojn/io.git",
-                "reference": "ebb5eb3289afffe06ffe0c123e7b62d7cd90a1c2"
+                "reference": "f630e51eaecbdf1ce6e6c49093128adca4010364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drakojn/io/zipball/ebb5eb3289afffe06ffe0c123e7b62d7cd90a1c2",
-                "reference": "ebb5eb3289afffe06ffe0c123e7b62d7cd90a1c2",
+                "url": "https://api.github.com/repos/drakojn/io/zipball/f630e51eaecbdf1ce6e6c49093128adca4010364",
+                "reference": "f630e51eaecbdf1ce6e6c49093128adca4010364",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "Simple Data Mapper library aiming reach any source",
-            "time": "2014-04-29 03:02:17"
+            "time": "2014-05-13 02:25:31"
         },
         {
             "name": "google/apiclient",
@@ -632,12 +632,8 @@
             "time": "2014-04-23 14:04:21"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "monolog/monolog": 0,
@@ -646,7 +642,5 @@
     "platform": {
         "php": ">=5.4.0"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
